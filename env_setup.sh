@@ -9,8 +9,8 @@
 #      1. Change the github_username to your username                         #
 #      2. Change the github_password to your password                         #
 ############################################################################### 
-github_username='jwagstaff'
-github_password='NavySeal2012$$'
+github_username='username'
+github_password='password'
 
 domain_name="omnibuilds.com"
 project_slug="omnibuilds"
