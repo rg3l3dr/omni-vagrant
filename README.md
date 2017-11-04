@@ -23,7 +23,8 @@ blah
 
 ## General App setup steps
 
-'''
+```bash
+
 # clone the repo at dev branch
 git clone -b dev https://github.com/jwagstaff/app.git
 
@@ -32,5 +33,6 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-'''
+
+```
 
