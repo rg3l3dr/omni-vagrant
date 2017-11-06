@@ -1,6 +1,6 @@
 # omni-vagrant
 
-## Bryan add your readme here
+## 12 steps to dev ready!
 
 ```
 1. Download the repo
