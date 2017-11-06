@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-############################################################################### 
-############################################################################### 
+###############################################################################
+###############################################################################
 # VAR SETUP.
 
-############################################################################### 
+###############################################################################
 #      NOTE:                                                                  #
 #      1. Change the github_username to your username                         #
 #      2. Change the github_password to your password                         #
-############################################################################### 
+###############################################################################
 github_username='username'
 github_password='password'
 
@@ -38,20 +38,20 @@ apt_packages=(
 	# Extra stuff, in case you want to SSH to the machine and work interactively
 	tmux
 	byobu
-	
+
 	# These are the pyenv requirements, see
 	# https://github.com/yyuu/pyenv/wiki/Common-build-problems#requirements
 	make
-	build-essential 
-	libssl-dev 
-	zlib1g-dev 
-	libbz2-dev 
-	libreadline-dev 
-	libsqlite3-dev 
+	build-essential
+	libssl-dev
+	zlib1g-dev
+	libbz2-dev
+	libreadline-dev
+	libsqlite3-dev
 	llvm
     python-pip
-	postgresql-9.5 
-	
+	postgresql-9.5
+
 	# Needed for Python deps
     python-dev
 	libpq-dev  # psycopg2
@@ -98,7 +98,7 @@ sudo echo "source $VIRTUAL_ENV_ROOT/bin/activate" >> /home/vagrant/.profile
 
 # Install the Django requirements for development
 cd "/home/vagrant/$domain_name/server"
-# For some reason without installing the urllib3[secure] packages things won't install correctly... 
+# For some reason without installing the urllib3[secure] packages things won't install correctly...
 # so here it is..
 sudo /home/vagrant/$domain_name/server/$virtual_env/bin/pip install urllib3[secure]
 sudo /home/vagrant/$domain_name/server/$virtual_env/bin/pip install -r requirements.txt
@@ -118,12 +118,14 @@ else
 	sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $project_slug TO $db_user"
 fi
 
-# TODO Add this to .env, inject .env env vars in the shell
-# export DATABASE_URL="postgres://$db_user:$db_password@127.0.0.1:5432/$project_slug"
 sudo cp /home/vagrant/$domain_name/server/src/server/.env.example /home/vagrant/$domain_name/server/src/server/.env
 cd "/home/vagrant/$domain_name/server/src"
 python manage.py migrate
 python manage.py loaddata initial_data
+
+# Clone the frontend app
+cd "/home/vagrant/$domain_name"
+git clone -b dev https://$github_username:$github_password@github.com/jwagstaff/app.git
 
 end_seconds="$(date +%s)"
 echo "-----------------------------"

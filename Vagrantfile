@@ -8,14 +8,14 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = true
 
   config.vm.network "forwarded_port", guest: 8000, host: 8000
-  
+
   config.vm.synced_folder "./", "/home/vagrant/omnibuilds.com", create: true
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "omnibuilds"
+    vb.name = "omnibuilds-test"
     vb.memory = "2048"
   end
 
   config.vm.provision "shell", path: env_setup_path, privileged: false
-  
+
 end
