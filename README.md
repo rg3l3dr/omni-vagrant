@@ -1,5 +1,6 @@
 # omni-vagrant
 
+
 ## 12 steps to dev ready!
 
 ```
@@ -39,8 +40,9 @@
 
 12. CHEERS!
 ```
-#### NOTE: a super user is created username: admin password: admin123
 
+NOTE:
+> A super user is created with username: admin password: admin123
 
 ## General Server Setup Steps (just check to make sure you have all of this)
 
@@ -48,6 +50,9 @@
 ### Make sure the vagrant file is setting tthe django localhost port to 8000
 
 * Install virtual box, vagrant, vagrant manager
+  - ** vagrant version > 1.9 virtualbox below 5.2 **
+  - [vagrant download here](https://www.vagrantup.com/downloads.html)
+  - [virtualbox download here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
 * Clone the vagrant repo
 * Change the GitHub user/pass
 * Provision the vagrant instance
