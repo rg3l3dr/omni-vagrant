@@ -4,7 +4,7 @@
 ## 12 steps to dev ready!
 **Read General requirements below if vagrant and virtualbox has not been setup in your computer**
 
-```
+
 1. Download the repo via ssh or https
   - git clone git@github.com:jwagstaff/omni-vagrant.git
   - git clone https://github.com/jwagstaff/omni-vagrant.git
@@ -39,8 +39,8 @@
 
 11. Navigate to localhost:8080 in the browser to see frontend app
 
-12. CHEERS!
-```
+12. CHEERS! :beer: :beers:
+
 
 **NOTE:**
 > There are some preset fixtures that are loaded into the initial setup and a super user is created with *username: admin password: admin123*
