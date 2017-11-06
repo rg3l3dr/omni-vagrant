@@ -50,7 +50,7 @@ NOTE:
 ### Make sure the vagrant file is cloning the dev branch
 ### Make sure the vagrant file is setting tthe django localhost port to 8000
 
-* Install virtual box(**> 1.9**), vagrant, vagrant manager(**below 5.2**)
+* Install virtual box **()> 1.9)**, vagrant, vagrant manager **(below 5.2)**
   - [vagrant download here](https://www.vagrantup.com/downloads.html)
   - [virtualbox download here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
 * Clone the vagrant repo
