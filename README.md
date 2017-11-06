@@ -4,43 +4,43 @@
 ## 12 steps to dev ready!
 **Read General requirements below if vagrant and virtualbox has not been setup in your computer**
 
-
+```
 1. Download the repo via ssh or https
-  - git clone git@github.com:jwagstaff/omni-vagrant.git
-  - git clone https://github.com/jwagstaff/omni-vagrant.git
+    - git clone git@github.com:jwagstaff/omni-vagrant.git
+    - git clone https://github.com/jwagstaff/omni-vagrant.git
 
 2. Navigate to the cloned omni-vagrant folder
-  - cd ./omni-vagrant
+    - cd ./omni-vagrant
 
 3. Open up env_setup.sh and enter your github username, password (**To pull down omnibuild's private repo**)
-  - line 12: github_username='username'
-  - line 13: github_password='password'
+    - line 12: github_username='username'
+    - line 13: github_password='password'
 
 4. Run installation for vagrant
-  - vagrant up
+    - vagrant up
 
 5. Once installation finishes you can ssh into the vagrant box
-  - vagrant ssh
+    - vagrant ssh
 
 6. Start backend server(**within the vagrant box**)
-  - cd ~/omnibuilds.com/server/src
-  - python manage.py runserver 0.0.0.0:8000
+    - cd ~/omnibuilds.com/server/src
+    - python manage.py runserver 0.0.0.0:8000
 
 7. Navigate to localhost:8000 in the browser to see landing page
 
 8. To start the frontend app navigate to the app folder(**within your local computer**)
-  - cd ./app
+    - cd ./app
 
 9. Install all node dependencies
-  - npm Install
+    - npm Install
 
 10. Start frontend app
-  - npm run dev
+    - npm run dev
 
 11. Navigate to localhost:8080 in the browser to see frontend app
 
 12. CHEERS! :beer: :beers:
-
+```
 
 **NOTE:**
 > There are some preset fixtures that are loaded into the initial setup and a super user is created with *username: admin password: admin123*
