@@ -5,7 +5,7 @@
 **Read General requirements below if vagrant and virtualbox has not been setup in your computer**
 
 ```
-1. Download the repo
+1. Download the repo via ssh or https
     - git clone git@github.com:jwagstaff/omni-vagrant.git
     - git clone https://github.com/jwagstaff/omni-vagrant.git
 
