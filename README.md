@@ -12,7 +12,7 @@
 2. Navigate to the cloned omni-vagrant folder
     - cd ./omni-vagrant
 
-3. Open up env_setup.sh and change the github username and password to your username and password(to be able to pull down the omnibuilds private repo)
+3. Open up env_setup.sh and enter your github username, password (**To pull down omnibuild's private repo**)
     - line 12: github_username='username'
     - line 13: github_password='password'
 
@@ -22,13 +22,13 @@
 5. Once installation finishes you can ssh into the vagrant box
     - vagrant ssh
 
-6. Start backend server(within the vagrant box)
+6. Start backend server(**within the vagrant box**)
     - cd ~/omnibuilds.com/server/src
     - python manage.py runserver 0.0.0.0:8000
 
 7. Navigate to localhost:8000 in the browser to see landing page
 
-8. To start the frontend app navigate to the app folder(in your local computer)
+8. To start the frontend app navigate to the app folder(**within your local computer**)
     - cd ./app
 
 9. Install all node dependencies
