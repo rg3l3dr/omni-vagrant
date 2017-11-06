@@ -39,7 +39,7 @@
 
 # 11. Navigate to localhost:8080 in the browser to see frontend app
 
-# 12. CHEERS! 🍺🍻
+# 12. CHEERS! 🍺🍻🥂
 ```
 
 **NOTE:**
