@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./", "/home/vagrant/omnibuilds.com", create: true
 
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "omnibuilds-test"
+    vb.name = "omnibuilds"
     vb.memory = "2048"
   end
 
