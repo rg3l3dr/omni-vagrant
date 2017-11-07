@@ -1,8 +1,22 @@
 # omni-vagrant
 
+The instructions below will help you do the following three things to setup a local development environment for OmniBuilds
+
+1. Create a vagrant virtual machine to host the django development environment
+2. Install and run the server (Django API) project in the vagrant vm
+3. Install and run the app (Vue SPA) on your machine (but in the shared vagrant folder)
+
+When complete you should be able run the server on localhost:8000 and the app on port:8080 and they should talk to each other out of the box
 
 ## 12 steps to dev ready!
-**Read General requirements below if vagrant and virtualbox has not been setup in your computer**
+**Start here if you need to install vagrant and virutal box on your machine**
+
+* Install virtual box **(> 1.9)**, vagrant **(below 5.2)**, and vagrant manager (optional)
+  - [vagrant download here](https://www.vagrantup.com/downloads.html)
+  - [virtualbox download here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
+  - [vagrant manager download here](http://vagrantmanager.com/downloads/)
+
+**If you already have them installed do the following**
 
 ```shell
 # 1. Download the repo via ssh or https
@@ -22,19 +36,19 @@
 # 5. Once installation finishes you can ssh into the vagrant box
     vagrant ssh
 
-# 6. Start backend server(within the vagrant box**)
+# 6. Start backend server(**within the vagrant box**)
     cd ~/omnibuilds.com/server/src
     python manage.py runserver 0.0.0.0:8000
 
 # 7. Navigate to localhost:8000 in the browser to see landing page
 
-# 8. To start the frontend app navigate to the app folder(within your local computer**)
+# 8. To start the frontend app navigate to the app folder(**within your local computer**)
     cd ./app
 
 # 9. Install all node dependencies
     npm Install
 
-# 10. Start frontend app
+# 10. Start frontend app (Vue SPA running on port 8080)
     npm run dev
 
 # 11. Navigate to localhost:8080 in the browser to see frontend app
@@ -45,17 +59,3 @@
 **NOTE:**
 > There are some preset fixtures that are loaded into the initial setup and a super user is created with *username: admin password: admin123*
 
-## General requirements (just check to make sure you have all of this)
-
-### Make sure the vagrant file is cloning the dev branch
-### Make sure the vagrant file is setting tthe django localhost port to 8000
-
-* Install virtual box **(> 1.9)**, vagrant, vagrant manager **(below 5.2)**
-  - [vagrant download here](https://www.vagrantup.com/downloads.html)
-  - [virtualbox download here](https://www.virtualbox.org/wiki/Download_Old_Builds_5_1)
-* Clone the vagrant repo
-* Change the GitHub user/pass
-* Provision the vagrant instance
-* Edit the .env file designs_bucket var with the dev initials for namespacing
-* SSH into vagrant instance
-* Run the server
