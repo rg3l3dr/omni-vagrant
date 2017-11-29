@@ -6,11 +6,12 @@
 
 ###############################################################################
 #      NOTE:                                                                  #
-#      1. Change the github_username to your username                         #
-#      2. Change the github_password to your password                         #
+#        Change the github_credential to your credentials                     #
+#        for username and password auth format as                             #
+#        username:password                                                    #
+#        for 2 factor token auth just use the token string                    #
 ###############################################################################
-github_username='username'
-github_password='password'
+github_credential='TOKEN_or_username:password'
 
 domain_name="omnibuilds.com"
 project_slug="omnibuilds"
@@ -80,7 +81,7 @@ fi
 echo "Pull Latest code off github and install requirements from project..."
 
 cd "/home/vagrant/$domain_name/"
-git clone -b stage https://$github_username:$github_password@github.com/jwagstaff/server.git
+git clone -b stage https://$github_credential@github.com/jwagstaff/server.git
 
 echo "Setting up virtual ENV and setup PATH..."
 
@@ -125,7 +126,7 @@ python manage.py loaddata initial_data
 
 # Clone the frontend app
 cd "/home/vagrant/$domain_name"
-git clone -b dev https://$github_username:$github_password@github.com/jwagstaff/app.git
+git clone -b dev https://$github_credential@github.com/jwagstaff/app.git
 
 end_seconds="$(date +%s)"
 echo "-----------------------------"
