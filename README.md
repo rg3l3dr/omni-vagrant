@@ -27,9 +27,9 @@ When complete you should be able run the server on localhost:8000 and the app on
     cd ./omni-vagrant
 
 # 3. Open up env_setup.sh and enter your github credentials (**To pull down omnibuild's private repo**)
+#   for 2 factor auth use the token gathered from github
+#   for regular username and password auth format string with ':' between username and password
     line 14: github_credential='TOKEN_or_username:password'
-    for 2 factor auth use the token gathered from github
-    for regular username and password auth format string with ':' between username and password
 
 # 4. Run installation for vagrant
     vagrant up
